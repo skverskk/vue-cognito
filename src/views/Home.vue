@@ -1,18 +1,23 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <amplify-authenticator></amplify-authenticator>
+    <amplify-sign-out></amplify-sign-out>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+// import { AmplifyEventBus } from '@aws-amplify/ui-vue';
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  mounted() {
+    console.log('Start Amplify Event Bus');
+    // AmplifyEventBus.$on('authState', (info) => {
+    //   console.log('auth', info);
+    //   if (info === 'signedIn') {
+    //     this.$router.push('about');
+    //   }
+    // });
+  },
+  name: 'home',
+  components: {},
+};
 </script>
